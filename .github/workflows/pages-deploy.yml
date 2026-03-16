@@ -46,11 +46,13 @@ jobs:
           bundler-cache: true
 
       - name: Build site
-        run: bundle exec jekyll b -d "blog/_site${{ steps.pages.outputs.base_path }}"
+        working-directory: blog
+        run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: "production"
 
       - name: Test site
+        working-directory: blog
         run: |
           bundle exec htmlproofer _site \
             \-\-disable-external \
