@@ -43,8 +43,10 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.3
-          bundler-cache: true
-          gemfile: blog/Gemfile
+
+      - name: Install dependencices
+        working-directory: blog
+        run: bundle install
 
       - name: Build site
         working-directory: blog
