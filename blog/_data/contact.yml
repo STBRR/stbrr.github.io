@@ -1,0 +1,8 @@
+#  The contact options.
+
+- type: twitter
+  icon: "fa-brands fa-x-twitter"
+
+- type: github
+  icon: "fab fa-github"
+
