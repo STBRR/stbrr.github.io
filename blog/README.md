@@ -1,1 +1,0 @@
-# xct's blog
